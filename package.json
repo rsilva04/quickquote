@@ -1,0 +1,22 @@
+{
+  "name": "quickquote",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node server.js",
+    "dev:frontend": "npm run dev --prefix frontend",
+    "dev:all": "node server.js & npm run dev --prefix frontend"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "AI-powered lead response system for home services",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.78.0",
+    "@supabase/supabase-js": "^2.99.1",
+    "cors": "^2.8.6",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "resend": "^6.9.3"
+  }
+}
