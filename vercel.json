@@ -1,6 +1,7 @@
 {
   "version": 2,
-  "buildCommand": "npm run build --prefix frontend",
+  "framework": null,
+  "buildCommand": "cd frontend && npm install && npm run build",
   "outputDirectory": "frontend/dist",
   "headers": [
     {
@@ -14,19 +15,6 @@
   ],
   "rewrites": [
     { "source": "/api/(.*)", "destination": "/api/$1" },
-    { "source": "/(.*)", "destination": "/frontend/dist/$1" }
-  ],
-  "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "/api/$1"
-    },
-    {
-      "handle": "filesystem"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/frontend/dist/index.html"
-    }
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
